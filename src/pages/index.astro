@@ -1,9 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import CardLink from "../components/card-link.astro"
 ---
 
 <Layout>
-	<h1>hola mundo</h1>
-	<p>Test 1
-	</p>
+	<div class="card">
+		<div class="card-username">
+			<img src="" alt="logo del perfil">
+			<h1>Username</h1>
+			<p>descripton</p>
+		</div>
+		<div class="card-links">
+			<CardLink link="https://www.google.com/" plataform="google"></CardLink>
+		</div>
+	</div>
+	<style>
+		.card {
+			color: white;
+		}
+		.card-username {
+			margin: 50px;
+		}
+	</style>
 </Layout>
