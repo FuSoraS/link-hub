@@ -1,8 +1,7 @@
 ---
-import googleLogo from '../assets/google.svg'
-const { link, plataform } = Astro.props;
+const { link, plataform, source } = Astro.props;
 ---
-<a href=`${link}` target="_blank" rel="noreferrer">{plataform} <img src={googleLogo.src} width="20px" height="20px" alt=`logo de ${plataform}`/></a>
+<a href=`${link}` target="_blank" rel="noreferrer">{plataform} <img src=`${source.src}` width="20px" height="20px" alt=`logo de ${plataform}`/></a>
 
 
 <style>

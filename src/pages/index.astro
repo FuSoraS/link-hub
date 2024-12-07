@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import CardLink from "../components/card-link.astro"
+import googleLogo from '../assets/google.svg'
 ---
 
 <Layout>
@@ -11,7 +12,7 @@ import CardLink from "../components/card-link.astro"
 			<p>descripton</p>
 		</div>
 		<div class="card-links">
-			<CardLink link="https://www.google.com/" plataform="google"></CardLink>
+			<CardLink link="https://www.google.com/" plataform="google" source={googleLogo}></CardLink>
 		</div>
 	</div>
 	<style>
