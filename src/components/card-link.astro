@@ -3,11 +3,19 @@ const { link, plataform, source } = Astro.props;
 ---
 <a href=`${link}` target="_blank" rel="noreferrer">{plataform} <img src=`${source.src}` width="20px" height="20px" alt=`logo de ${plataform}`/></a>
 
-
 <style>
     a {
-        border: solid white 3px;
+        border: solid #fff 3px;
         border-radius: 25px;
-        padding: 20px 50px;
+        padding: 15px 30px;
+        color: #fff;
+        display: inline-flex; 
     }
+    a:hover {
+        background-color: #729962;
+    }
+    img {
+        margin-left: 15px;
+    }
+
 </style>

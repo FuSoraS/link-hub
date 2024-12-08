@@ -1,26 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import CardLink from "../components/card-link.astro"
-import googleLogo from '../assets/google.svg'
+import linkedinLogo from '../assets/linkedin.svg'
+import githubLogo from '../assets/github-dark.svg'
 ---
 
 <Layout>
 	<div class="card">
 		<div class="card-username">
 			<img src="" alt="logo del perfil">
-			<h1>Username</h1>
-			<p>descripton</p>
+			<h1>FuSoraS</h1>
+			<p>Desarrollador web</p>
 		</div>
 		<div class="card-links">
-			<CardLink link="https://www.google.com/" plataform="google" source={googleLogo}></CardLink>
+			<CardLink link="https://www.linkedin.com/in/fusoras/" plataform="linkedIn" source={linkedinLogo} />
+			<CardLink link="https://github.com/FuSoraS/" plataform="GitHub" source={githubLogo} />
 		</div>
 	</div>
 	<style>
 		.card {
-			color: white;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
+			width: 400px;
+			color: #fff;
+			margin: auto;
 		}
 		.card-username {
 			margin: 50px;
-		}
+		}		
+
 	</style>
 </Layout>
