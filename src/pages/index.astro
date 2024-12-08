@@ -7,17 +7,20 @@ import githubLogo from '../assets/github-dark.svg'
 
 <Layout>
 	<div class="card">
-		<div class="card-username">
-			<img src="" alt="logo del perfil">
+		<div class="card-main card-username">
+			<!-- <img src="" alt="logo del perfil"> -->
 			<h1>FuSoraS</h1>
 			<p>Desarrollador web</p>
 		</div>
-		<div class="card-links">
+		<div class="card-main card-links">
 			<CardLink link="https://www.linkedin.com/in/fusoras/" plataform="linkedIn" sourceImg={linkedinLogo} />
 			<CardLink link="https://github.com/FuSoraS/" plataform="GitHub" sourceImg={githubLogo} />
 		</div>
 	</div>
 	<style>
+		:root{
+			--size-border: 15px 15px;
+		}
 		.card {
 			display: flex;
 			flex-wrap: wrap;
@@ -27,9 +30,21 @@ import githubLogo from '../assets/github-dark.svg'
 			color: #fff;
 			margin: auto;
 		}
+		.card-main {
+			width: 100%;
+		}
 		.card-username {
-			margin: 50px;
-		}		
+			background-color: rgb(10, 119, 83);
+			margin-top: 40px;
+			border-radius: var(--size-border) 0 0;
+			padding-bottom: 20px;
+		}
+		.card-links {
+			height: 300px;
+			padding-top: 20px;
+			background-color: #2e2d2d;
+			border-radius: 0 0 var(--size-border);
+		}
 
 	</style>
 </Layout>
