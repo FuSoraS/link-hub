@@ -1,14 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import CardLink from "../components/card-link.astro"
-import linkedinLogo from '../assets/linkedin.svg'
-import githubLogo from '../assets/github-dark.svg'
+import Layout from "../layouts/Layout.astro";
+import CardLink from "../components/card-link.astro";
+import linkedinLogo from '../assets/linkedin.svg';
+import githubLogo from '../assets/github-dark.svg';
+import profileLogo from '../assets/icon.webp';
 ---
 
 <Layout title="FuSoraS | GitHub, Linkein">
 	<div class="card">
 		<div class="card-main card-username">
-			<!-- <img src="" alt="logo del perfil"> -->
+			<img src=`${profileLogo.src}` alt="logo del perfil">
 			<h1>FuSoraS</h1>
 			<p>Desarrollador web</p>
 		</div>
@@ -41,6 +42,12 @@ import githubLogo from '../assets/github-dark.svg'
 		}
 		.card-username h1 {
 			font-size: 36px;
+			margin-top: 0;
+		}
+		.card-username img {
+			width: 30%;
+			border-radius: 50%;
+			margin: 25px 0;
 		}
 		.card-links {
 			height: 300px;
