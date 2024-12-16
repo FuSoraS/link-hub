@@ -1,30 +1,40 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CardLink from "../components/card-link.astro";
-import linkedinLogo from '../assets/linkedin.svg';
-import githubLogo from '../assets/github-dark.svg';
-import profileLogo from '../assets/icon.webp';
-import profileLogoSmall from '../assets/icon-small.webp';
-
+import linkedinLogo from "../assets/linkedin.svg";
+import githubLogo from "../assets/github-dark.svg";
+import profileLogo from "../assets/icon.webp";
+import profileLogoSmall from "../assets/icon-small.webp";
 ---
 
 <Layout title="FuSoraS | GitHub, Linkein">
 	<div class="card">
 		<div class="card-main card-username">
 			<picture>
-				<source srcset=`${profileLogoSmall.src}` media="(max-width: 700px)">
-				<img src=`${profileLogo.src}` alt="logo del perfil">
-			  </picture>
+				<source
+					srcset=`${profileLogoSmall.src}`
+					media="(max-width: 700px)"
+				/>
+				<img src=`${profileLogo.src}` alt="logo del perfil" />
+			</picture>
 			<h1>FuSoraS</h1>
 			<p>Desarrollador web</p>
 		</div>
 		<div class="card-main card-links">
-			<CardLink link="https://www.linkedin.com/in/fusoras/" plataform="linkedIn" sourceImg={linkedinLogo} />
-			<CardLink link="https://github.com/FuSoraS/" plataform="GitHub" sourceImg={githubLogo} />
+			<CardLink
+				link="https://www.linkedin.com/in/fusoras/"
+				plataform="linkedIn"
+				sourceImg={linkedinLogo}
+			/>
+			<CardLink
+				link="https://github.com/FuSoraS/"
+				plataform="GitHub"
+				sourceImg={githubLogo}
+			/>
 		</div>
 	</div>
 	<style>
-		:root{
+		:root {
 			--size-border: 15px 15px;
 		}
 		.card {
@@ -43,7 +53,7 @@ import profileLogoSmall from '../assets/icon-small.webp';
 			width: 100%;
 		}
 		.card-username {
-			background: linear-gradient(132deg, #000000,#044214,#025f3e);
+			background: linear-gradient(132deg, #000000, #044214, #025f3e);
 			border-radius: var(--size-border) 0 0;
 			padding-bottom: 20px;
 		}
@@ -55,6 +65,7 @@ import profileLogoSmall from '../assets/icon-small.webp';
 			width: 30%;
 			border-radius: 50%;
 			margin: 25px 0;
+			aspect-ratio: 512/512;
 		}
 		.card-links {
 			min-height: 200px;
@@ -62,6 +73,5 @@ import profileLogoSmall from '../assets/icon-small.webp';
 			background-color: #2e2d2d;
 			border-radius: 0 0 var(--size-border);
 		}
-
 	</style>
 </Layout>
